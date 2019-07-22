@@ -1,0 +1,44 @@
+-- phpMyAdmin SQL Dump
+-- version 2.8.0.1
+-- http://www.phpmyadmin.net
+-- 
+-- Host: custsql-ipw22.eigbox.net
+-- Generation Time: Mar 26, 2019 at 11:12 PM
+-- Server version: 5.6.41
+-- PHP Version: 4.4.9
+-- 
+-- Database: `tim_2017`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `Employees`
+-- 
+
+CREATE TABLE `Employees` (
+  `EMP_ID` int(10) NOT NULL,
+  `fName` varchar(50) NOT NULL,
+  `lName` varchar(50) NOT NULL,
+  `Address` varchar(50) NOT NULL,
+  `City` varchar(50) NOT NULL,
+  `State` varchar(50) NOT NULL,
+  `Zip` varchar(10) NOT NULL,
+  `CellPhone` varchar(14) DEFAULT NULL,
+  `HomePhone` varchar(14) DEFAULT NULL,
+  `CellCompany` varchar(50) DEFAULT NULL,
+  `Wage` int(10) DEFAULT NULL,
+  `Salary` int(10) DEFAULT NULL,
+  `Commisions` int(2) DEFAULT NULL,
+  `HireDate` date NOT NULL,
+  `Termination_Date` date DEFAULT NULL,
+  `Supervisor` int(10) NOT NULL,
+  `Goal` int(10) NOT NULL,
+  `Truck_ID` int(10) DEFAULT NULL,
+  PRIMARY KEY (`EMP_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table `Employees`
+-- 
+

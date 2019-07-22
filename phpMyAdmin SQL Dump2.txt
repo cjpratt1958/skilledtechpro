@@ -1,0 +1,52 @@
+-- phpMyAdmin SQL Dump
+-- version 2.8.0.1
+-- http://www.phpmyadmin.net
+-- 
+-- Host: custsql-ipw22.eigbox.net
+-- Generation Time: Mar 26, 2019 at 10:51 PM
+-- Server version: 5.6.41
+-- PHP Version: 4.4.9
+-- 
+-- Database: `tim_2017`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `Phones`
+-- 
+
+CREATE TABLE `Phones` (
+  `phone_id` int(4) NOT NULL,
+  `tech_id` int(4) NOT NULL,
+  `truck_id` int(4) NOT NULL,
+  `number` varchar(14) NOT NULL,
+  `notes` varchar(255) NOT NULL,
+  `hotspot` varchar(10) NOT NULL,
+  `carrier` varchar(25) NOT NULL,
+  `name` varchar(25) NOT NULL,
+  `manufacter` varchar(25) NOT NULL,
+  `phone` varchar(25) NOT NULL,
+  `wifiname` varchar(20) NOT NULL,
+  PRIMARY KEY (`phone_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table `Phones`
+-- 
+
+INSERT INTO `Phones` VALUES (0, 0, 0, 'number', '', 'hotspot', 'carrier', 'name', 'manufacter', 'phone', 'wifiname');
+INSERT INTO `Phones` VALUES (1, 1, 0, '(385) 250-7265', '', '', 't-mobile', 'Not Assigned', 'LG', 'K20 plus', '');
+INSERT INTO `Phones` VALUES (2, 0, 0, '(385) 250-8801', '', '', 't-mobile', 'Josh Jones  (Damaged)', 'LG', 'K20 plus', '');
+INSERT INTO `Phones` VALUES (3, 0, 0, '(385) 254-1005', '', '', 't-mobile', 'Not Assigned', 'LG', 'K20 plus', '');
+INSERT INTO `Phones` VALUES (4, 0, 0, '(385) 368-3617', '', '', 't-mobile', 'Not Assigned', 'LG', 'K20 plus', '');
+INSERT INTO `Phones` VALUES (5, 0, 0, '(801) 809-8392', '', '', 't-mobile', 'Josh Jones', 'LG', 'K20 plus', '');
+INSERT INTO `Phones` VALUES (6, 0, 0, '(801) 809-8402', '', '', 't-mobile', 'Paul Alexander', 'LG', 'K20 plus', '');
+INSERT INTO `Phones` VALUES (7, 0, 0, '(801) 895-8359', '', '', 't-mobile', '', '861251037718180', 'SyncUP DRIVE', '');
+INSERT INTO `Phones` VALUES (8, 0, 0, '(801) 895-8412', '', '', 't-mobile', '', '861251037867470', 'SyncUP DRIVE', '');
+INSERT INTO `Phones` VALUES (9, 0, 0, '(801) 895-8311', '', '', 't-mobile', '', '861251037733570', 'SyncUP DRIVE', '');
+INSERT INTO `Phones` VALUES (10, 0, 0, '(385) 313-6740', '', '', 't-mobile', 'Dispatch', 'LG', 'G5', '');
+INSERT INTO `Phones` VALUES (11, 0, 0, '(801) 410-2977', '', '', 't-mobile', 'Carl Pratt', 'Samsung', 'S6', '');
+INSERT INTO `Phones` VALUES (12, 0, 137, '', '', '37718183', 't-mobile', '2004 E250 Van', '861251037718183', 'SyncUP DRIVE', 'T-Mobil Broadband83');
+INSERT INTO `Phones` VALUES (13, 0, 0, '(801) 410-2979', '', '', 't-mobile', 'Ben Pratt', 'LG', 'G5', '');
+INSERT INTO `Phones` VALUES (14, 0, 0, '(801) 979-2028', '', '', 't-mobile', 'Laurie Pratt', 'LG', '', '');

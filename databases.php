@@ -1,6 +1,6 @@
 <?php 
 $page_title = 'Databases';
-include('includes/inventoryheader.html');
+include('includes/databaseheader.html');
 ?>
 
 <p>	<strong>Databases Page.</strong></p>

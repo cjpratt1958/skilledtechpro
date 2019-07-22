@@ -1,27 +1,31 @@
 <?php
-$page_title = 'TIM: Workorders: New Job';
+$page_title = 'SkilledTechPro: Workorders: New Job';
 
 // workorder menu bar on left side and title
 include('includes/workorderheader.html');
-
+//date = date('y-m-d');
 
 ?>
 
 <p>	<strong>Workorders: > Add a New Job</strong></p>
 
-// create form for entering new job
 
-	<form action="frm_entercustomer.php" method="post">
+
+
+	<form name="customerservice" action="frm_entercustomer.php" method="POST">
+		<P><Label>Date: <input type="date" name="today" id="date" value= "<?php echo date('Y-m-d');?>"/>
 
 	<fieldset><legend>Enter Customer Information: </legend>
 
-	<p><label>Cellular: <input type="text" name = "cphone" />
+	<p><label>Cellular: <input type="phone" name = "cphone" />
 	</label><label>Home: <input type="text" name = "hphone" />
 	</label></p>
 
 	<p><label>F Name: <input type="text" name = "fname" />
 	</label><label>L Name: <input type="text" name = "lname" />
 	</label></p>
+	
+	</ $name = $fname+' '+lname />
 
 		<p><label>Company: <input type="text" name = "company" />
 	</label>
@@ -38,13 +42,11 @@ include('includes/workorderheader.html');
 	</label><label>Zip: <input type="text" name = "zip" />
 	</label></p>
 
-	<p><label>email: <input type="text" name = "email" />
-	<label><lable>job Referral: <input type="text" name = "referral" />
+	<p><label>email: <input type="email" name = "email" />
+	</label><lable>Job Referral: <input type="text" name = "referral" />
 	</label></p>
 
-		<p><label>Customer Notes: <input type="text" name = "custnotes" />
-
-	</label></p>
+	<p><label>Cust Notes: <input type="text" name = "custnotes" />
 
 
 
@@ -52,11 +54,13 @@ include('includes/workorderheader.html');
 
 	</fieldset>
 		<fieldset><legend>Enter Job Information: </legend>
+		<p><label>Job Description: <input type="text" name = "jobdesc" />
+	</label>
 		<fieldset><legend>Priority, Trade, Terms: </legend>
 
-	<p align="right"> <p><label for="priority">Priority: </label>
+	<p align="right"> <p><label for="priority"><STRONG>PRIORITY: </STRONG></label> <br>
 	<input type="radio" name="priority" value="00 Emerg">Emer
-	<input type="radio" name="priority" value="01 Job">GFI
+	<input type="radio" name="priority" checked = "checked" value="01 Job">GFI 
 	<input type="radio" name="priority" value="02 Est">Est
 	<input type="radio" name="priority" value="03 Cncl">Cancel
 	<input type="radio" name="priority" value="04 Rwk">Rework
@@ -67,8 +71,8 @@ include('includes/workorderheader.html');
 	</p>
 
 
-	<p align="right"> <p><label for="trade">Trade: </label>
-	<input type="radio" name="trade" value="Elect">Elect
+	<p align="right"> <p><label for="trade"><STRONG>TRADE: </STRONG></label> <br>
+	<input type="radio" name="trade" checked = "checked" value="Elect">Elect
 	<input type="radio" name="trade" value="HVAC">HVAC
 	<input type="radio" name="trade" value="Cameras	">Cameras
 	<input type="radio" name="trade" value="Plumbing">Plumbing
@@ -76,20 +80,19 @@ include('includes/workorderheader.html');
 	</p>
 
 
-	<p align="right"> <p><label for="terms">Terms: </label>
+	<p align="right"> <p><label for="terms"><STRONG>TERMS: </STRONG></label> <br>
 	<input type="radio" name="terms" value="Bill">Bill
-	<input type="radio" name="terms" value="C.O.D.">COD
+	<input type="radio" name="terms" checked = "checked" value="C.O.D.">COD
 	<input type="radio" name="terms" value="Estimate">Estimate
+	<input type="radio" name="terms" value="Finance">Finance
 	</p>
 
 
 	</fieldset>
 	<br>
-	<p><label>  Job History: <input type="text" name = "f9notes" />
-	</label> <label> Notes: <input type="text" name = "jnotes" />
+	</label> <label> Job Notes: <input type="text" name = "jobnotes" />
 	</label>
-	<p><label>Job Description: <input type="text" name = "jobdesc" />
-	</label>
+
 
 
 		</fieldset>
@@ -97,11 +100,13 @@ include('includes/workorderheader.html');
 
 	</fieldset>
 		<fieldset><legend>Enter Schedule Information: </legend>
-			<p><label>Scheduled Date: <input type="text" name = "schedule_date" </label><label>Time: <input type="text" name = "schedule_time" />
+		
+		
+	<p><label>Scheduled Date:<input type="date" id="schedule_date" value="<?php echo date('Y-m-d');?>"/><label>Time: <input type="text" name = "schedule_time" />
 	</label>
 
-<p><label>Schedule Notes: <input type="text" name = "Technician" /><label>Technician: <input type="text" name = "Technician" />
-		
+<p><label>Schedule Notes: <input type="text" name = "schednotes" /><label>Tech: <input type="text" name = "technician" />
+
 	</label>
 
 
@@ -114,14 +119,13 @@ include('includes/workorderheader.html');
 		<input type="submit" name="clear" value="Clear Form"/>
 		<input type="submit" name="cancel" value="Cancel"/>
 		<input type="submit" name="done" value="Done"/>
+
+
+
 	</p>
 
 <?php
 
 include('includes/footer.html');
 
-// open connection to the database "skilledprotech"
-require_once('../mysqli_connect.php');
-
-
-
+?>

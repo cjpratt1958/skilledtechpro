@@ -1,10 +1,10 @@
 <?php
-$page_title = 'SkilledProTech Home';
+$page_title = 'SkilledTechPro Dashboard';
 include('includes/homeheader.html');
 ?>
 
-<p>	<strong>Home Menu.</strong></p>
-<p>Content</div>
+<p>	<strong>Dashboard</strong></p>
+<p>Welcome to SkilledTech's Dashboard page:</div>
 
 <?php
 

@@ -1,0 +1,40 @@
+-- phpMyAdmin SQL Dump
+-- version 2.8.0.1
+-- http://www.phpmyadmin.net
+-- 
+-- Host: custsql-ipw22.eigbox.net
+-- Generation Time: Mar 26, 2019 at 11:14 PM
+-- Server version: 5.6.41
+-- PHP Version: 4.4.9
+-- 
+-- Database: `tim_2017`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `Job`
+-- 
+
+CREATE TABLE `Job` (
+  `Job_ID` int(10) NOT NULL,
+  `Cust_ID` int(10) NOT NULL,
+  `Sold_Date` datetime NOT NULL,
+  `Disp_Date` datetime NOT NULL,
+  `Start_Date` datetime NOT NULL,
+  `End_Date` datetime NOT NULL,
+  `Close_Date` datetime NOT NULL,
+  `Paid_Date` datetime NOT NULL,
+  `WorkOrder` int(20) NOT NULL,
+  `Technician` varchar(20) NOT NULL,
+  `Schedule_Date` date NOT NULL,
+  `Schedule_Time` time NOT NULL,
+  `JobEstTask` varchar(10) NOT NULL,
+  `Incident` int(10) NOT NULL,
+  PRIMARY KEY (`Job_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table `Job`
+-- 
+
