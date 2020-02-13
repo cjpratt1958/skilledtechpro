@@ -1,5 +1,5 @@
 <?php
-	$page_title = "Enter Customer Information";
+	$page_title = "Enter Employee Information";
 	include('includes/hrheader.html');
 
 
@@ -21,8 +21,8 @@ if (!$conn){
 	die("Connection failed: " .mysqli_connect_error());
 	}
 	echo "Connected successfully";
-	
-	
+
+
 // Check required fields
 
 // **** TEST
@@ -80,29 +80,29 @@ $Incident = $date;
 		if (!empty($_REQUEST['terms'])){	$terms = $_REQUEST['terms'];}else{ $terms = NULL;}
 		if (!empty($_REQUEST['billsto'])){	$billsto = $_REQUEST['billsto'];}else{ $billsto = NULL;}
 		if (!empty($_REQUEST['schednotes'])){	$schednotes = $_REQUEST['schednotes'];}else{ $schednotes = NULL;}
-		
+
 		if (!empty($_REQUEST['Emp_ID'])){	$Emp_ID = $_REQUEST['Emp_ID'];}else{ $Emp_ID = NULL;}
 		if (!empty($_REQUEST['Incident'])){	$Incident = $_REQUEST['Incident'];}else{ $Incident = NULL;}
 		if (!empty($_REQUEST['trade'])){	$trade = $_REQUEST['trade'];}else{ $trade = NULL;}
 		if (!empty($_REQUEST['priority'])){	$priority = $_REQUEST['priority'];}else{ $priority = NULL;}
 		if (!empty($_REQUEST['Schedule_Date'])){	$Schedule_Date = $_REQUEST['Schedule_Date'];}else{ $Schedule_Date = NULL;}
-		
-		
+
+
 		$jobnotes = $jobnotes." Job sold by ?? on ".$date;
 		$custnotes = $custnotes." Customer created by ?? on ".$date;
-		
-		
+
+
 		// DISPLAY ERRORS
 		if ($errormsg = 'no errors'){   } else {echo $errormsg; echo ' <a href="/customerservice.php">Click Here to continue</a>';}
-		
+
 		// ENTER INTO CUSTOMERS DATABASE
 		// $date = now();
-		
+
 		$sql_cust = "INSERT INTO customers (fname,lname,name,company,contact,address,city,state,zip,cphone,hphone,wphone,email,terms,billsto,notes,date)
 		VALUES ('$fname','$lname','$name','$company','$contact','$address','$city','$state','$zip','$cphone','$hphone','$wphone','$email','$terms','$billsto','$notes','$date')";
-		
+
 		$custid	 = select 'customers.Cust_ID';
-			
+
 //		//if ($conn->query($sql_cust) === TRUE)  {
 //		//	echo "Thank you! Your Customer info has been entered into our database, you may close this window!";
 //} else//{
@@ -111,15 +111,15 @@ $Incident = $date;
 		$sql_job = "INSERT INTO jobs (Cust_ID,Sold_Date,Emp_ID,Schedule_Date,Incident,priority,trade,terms,schednotes)
 		VALUES ('$custid','$Sold_Date','$Emp_ID','$Schedule_Date','$Incident','$priority','$trade','$terms','$schednotes')";
 
-	
-	
+
+
 //	if  ($conn->query($sql_job) === TRUE){
 //			echo "Thank you! Your job info has been entered into our database, you may close this window!";
 //		}else{
-//			
+//
 //		}
-	
-	
+
+
 $conn->close();
 
 		include('includes/footer.html');

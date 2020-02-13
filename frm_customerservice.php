@@ -1,16 +1,16 @@
 <?php
-$page_title = 'SkilledTechPro: Workorders: New Job';
+$page_title = 'STP Workorders: New Job';
 
 // workorder menu bar on left side and title
-include('includes/workorderheader.html');
+// include('includes/workorderheader.html');
 //date = date('y-m-d');
-
+<title><?php echo $page_title; ?></title>
 ?>
 
 
 <head>
 <title> Add a new Job </title>
-<link rel="stylesheet" type="text/css" href="css/style.css"> 
+<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 
@@ -29,10 +29,10 @@ include('includes/workorderheader.html');
 	</label><label>Home: <input type="text" name = "hphone" />
 	</label></p>
 
-	<p><label>F Name: <input type="text" name = "fname" />
-	</label><label>L Name: <input type="text" name = "lname" />
+	<p><label>First Name: <input type="text" name = "fname" />
+	</label><label>Last Name: <input type="text" name = "lname" />
 	</label></p>
-	
+
 	</ $name = $fname+' '+lname />
 
 		<p><label>Company: <input type="text" name = "company" />
@@ -54,7 +54,7 @@ include('includes/workorderheader.html');
 	</label><lable>Job Referral: <input type="text" name = "referral" />
 	</label></p>
 
-	<p><label>Cust Notes: <input type="text" name = "custnotes" />
+	<p><label>Customer Notes: <input type="text" name = "custnotes" />
 
 
 
@@ -67,12 +67,12 @@ include('includes/workorderheader.html');
 		<fieldset><legend>Priority, Trade, Terms: </legend>
 
 	<p align="right"> <p><label for="priority"><STRONG>PRIORITY: </STRONG></label> <br>
-	<input type="radio" name="priority" value="00 Emerg">Emer
-	<input type="radio" name="priority" checked = "checked" value="01 Job">GFI 
-	<input type="radio" name="priority" value="02 Est">Est
+	<input type="radio" name="priority" value="00 Emerg">Emergency
+	<input type="radio" name="priority" checked = "checked" value="01 Job">Go For It
+	<input type="radio" name="priority" value="02 Est">Estimate
 	<input type="radio" name="priority" value="03 Cncl">Cancel
 	<input type="radio" name="priority" value="04 Rwk">Rework
-	<input type="radio" name="priority" value="05 Self">SelfGen
+	<input type="radio" name="priority" value="05 Self">Self Generated
 	<input type="radio" name="priority" value="06 Oth">Other
 
 
@@ -80,11 +80,12 @@ include('includes/workorderheader.html');
 
 
 	<p align="right"> <p><label for="trade"><STRONG>TRADE: </STRONG></label> <br>
-	<input type="radio" name="trade" checked = "checked" value="Elect">Elect
+	<input type="radio" name="trade" checked = "checked" value="Elect">Electrical
 	<input type="radio" name="trade" value="HVAC">HVAC
-	<input type="radio" name="trade" value="Cameras	">Cameras
-	<input type="radio" name="trade" value="Plumbing">Plumbing
-	<input type="radio" name="trade" value="Energy">Energy
+	<input type="radio" name="trade" value="Cameras	">Video Surviellance
+	<input type="radio" name="trade" value="Energy">Energy Management
+	<input type="radio" name="trade" value="Smart Homes">Smart Homes
+
 	</p>
 
 
@@ -108,9 +109,10 @@ include('includes/workorderheader.html');
 
 	</fieldset>
 		<fieldset><legend>Enter Schedule Information: </legend>
-		
-		
-	<p><label>Scheduled Date:<input type="date" id="schedule_date" value="<?php echo date('Y-m-d');?>"/><label>Time: <input type="text" name = "schedule_time" />
+
+
+	<p><label>Scheduled Date:<input type="date" id="schedule_date" value="<?php echo date('Y-m-d');?>"/>
+		<label>Time: <input type="text" name = "schedule_time" />
 	</label>
 
 <p><label>Schedule Notes: <input type="text" name = "schednotes" /><label>Tech: <input type="text" name = "technician" />
